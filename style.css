@@ -4,29 +4,33 @@ body {
     background-color: hsl(185, 41%, 84%);
     font-family: 'Space Mono', monospace;
 }
-.bill-amount {
+
+
+.input {
     position: relative;
 }
-
 input {
-    width: 80%;
+    width: 95%;
     height: 40px;
     border-radius: 10px;
     margin-bottom: 10px;
+    margin-top: 10px;
     
 }
-.dollar {
+.icon {
     position: absolute;
-    left: 40px;
-    top: 20px;
+    left: 20px;
+    top: 25px;
 }
 
 .bill {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     color: hsl(186, 14%, 43%);
     font-weight: 700;
     padding: 20px;
 }
-.bill-input {
+.bill-input, .number {
     border: 0px;
     padding: 5px;
     background-color: hsl(189, 41%, 97%);
@@ -39,8 +43,9 @@ button {
     padding: 10px;
     border-radius: 5px;
     font-size: 20px;
-    width: 150px;
-    margin: 10px;
+    width: 170px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .tip-amount {
     display: flex;
@@ -59,6 +64,8 @@ label {
 .logo {
     margin: 20px;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 .logo img {
     margin: 0 auto;
@@ -111,6 +118,7 @@ label {
     background-color: hsl(183, 100%, 15%);
     color: hsl(185, 41%, 84%);
     padding: 25px;
+    margin-top: 10px;
 }
 .price {
     margin-bottom: 20px;
