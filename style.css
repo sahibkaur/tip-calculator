@@ -144,6 +144,10 @@ label {
     background-color: hsl(189, 41%, 97%);
     color: hsl(184, 14%, 56%);
 }
+.inactive {
+    background-color: #0b676d;
+    color: #065f63;
+}
 
 @media screen and (min-width: 600px) {
     .bill {
