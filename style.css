@@ -87,7 +87,7 @@ label {
     height: 900px;
 }
 
-#reset-btn{
+#reset{
     background-color: hsl(172, 67%, 45%);
     padding: 10px;
     border-radius: 5px;
