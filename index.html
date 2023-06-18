@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="script.js"></script>
+
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -31,7 +31,7 @@
     <div class="bill-amount small-cont">
       <p>Bill</p>
       <div class="input">
-        <input type="number" class="bill-input" placeholder="0">
+        <input type="number" class="bill-input inputs" placeholder="0" onchange="toActive()">
         <img src="images/icon-dollar.svg" class="icon">
       </div>
     </div>
@@ -51,7 +51,7 @@
     <div>
       <label>Number of People</label>
       <div class="input">
-        <input type="number" class="number" placeholder="0"></input>
+        <input type="number" class="number inputs" placeholder="0" onchange="toActive()"></input>
         <img src="images/icon-person.svg" class="icon">
       </div>
     </div>
@@ -85,5 +85,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Sahibpreet Kaur</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

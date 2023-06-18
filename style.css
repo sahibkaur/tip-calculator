@@ -88,12 +88,11 @@ label {
 }
 
 #reset{
-    background-color: hsl(172, 67%, 45%);
+
     padding: 10px;
     border-radius: 5px;
     border: none;
     width: 90%;
-    color: hsl(183, 100%, 15%);
     text-transform: uppercase;
     font-family: 'Space Mono', monospace;
     font-weight: bold;
@@ -147,6 +146,10 @@ label {
 .inactive {
     background-color: #0b676d;
     color: #065f63;
+}
+.active {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
 }
 
 @media screen and (min-width: 600px) {
