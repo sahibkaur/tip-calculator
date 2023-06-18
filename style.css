@@ -57,6 +57,7 @@ button {
     width: 170px;
     margin-top: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 .tip-amount {
     display: flex;
@@ -139,7 +140,7 @@ label {
     font-size: 12px;
 }
 
-.custom {
+#custom {
     background-color: hsl(189, 41%, 97%);
     color: hsl(184, 14%, 56%);
 }

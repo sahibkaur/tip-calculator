@@ -39,12 +39,12 @@
     <div class="tip-amount">
       <label>Select Tip %</label>
       <div class="tip-options">
-        <button>5%</button>
-        <button>10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <button class="custom">Custom</button>
+        <button value="5" class="tip-button" onclick="changeState(this)">5%</button>
+        <button value="10" class="tip-button" onclick="changeState(this)">10%</button>
+        <button value="15" class="tip-button" onclick="changeState(this)">15%</button>
+        <button value="25" class="tip-button" onclick="changeState(this)">25%</button>
+        <button value="50" class="tip-button" onclick="changeState(this)">50%</button>
+        <button value="custom" class="tip-button" id="custom" onclick="changeState(this)">Custom</button>
       </div>
     </div>
 
@@ -64,7 +64,7 @@
             Tip Amount
             <p class="desc">/ person</p>
         </div>
-        <div class="amount">$0.00</div>
+        <div class="amount" id="tip-amount">$0.00</div>
       </div>
     
       <div class="total flex">
@@ -72,7 +72,7 @@
           Total
           <p class="desc">/ person</p>
         </div>
-        <div class="amount">$0.00</div>
+        <div class="amount" id="total-amount">$0.00</div>
       </div>
     
     </div>
