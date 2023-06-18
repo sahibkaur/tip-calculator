@@ -6,6 +6,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
 }
 
 
@@ -37,7 +39,7 @@ input::placeholder {
     border-top-right-radius: 20px;
     color: hsl(186, 14%, 43%);
     font-weight: 700;
-    padding: 20px;
+    padding: 30px;
 }
 .bill-input, .number {
     border: 0px;
@@ -148,7 +150,7 @@ label {
       /* Apply some styles */
       border-radius: 20px;
       width: 800px;
-      height: 500px;
+      height: 400px;
       display: flex;
       justify-content: space-between;
     }
