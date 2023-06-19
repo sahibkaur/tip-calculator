@@ -6,8 +6,10 @@ let tipped = document.getElementById('tip-amount');
 let totalper = document.getElementById('total-amount');
 let tip_buttons = document.getElementsByClassName('tip-button');
 console.log(tip_buttons);
+const bill = input_val[0].value;
+const number = input_val[1].value;
 console.log(input_val);
-let tip_amount;
+let tip_amount, per;
 function toActive() {
 
     tip_pointer = tip_buttons[0];
@@ -22,11 +24,20 @@ function toActive() {
         tip_pointer = tip_buttons[i];
     }
 
-    if(input_val[0].value>0 && input_val[1].value>0 && flag == 1 ) {
+    if(input_val[0].valueAsNumber>0 && input_val[1].valueAsNumber>0 && flag == 1 ) {
         reset_button.classList.add("active");
+        console.log(per, input_val[0].valueAsNumber);
+        tip_amount = (input_val[0].valueAsNumber)*per/100;
+        console.log(tip_amount)
+        const tip_amount_per = (tip_amount)/input_val[1].valueAsNumber;
+        console.log(input_val[0].valueAsNumber + tip_amount);
+        let total = (input_val[0].valueAsNumber + tip_amount)/input_val[1].valueAsNumber;
+        console.log(total);
+
         //let tip = 
-        tipped.innerHTML = "$"+tip_amount;
-        totalper.innerHTML = "$"+input_val[1].value;
+        tipped.innerHTML = "$"+tip_amount_per.toFixed(2);
+        totalper.innerHTML = "$"+total.toFixed(2);
+
     }
 }
 
@@ -40,7 +51,7 @@ function changeState(selectedTip) {
         tip_pointer = tip_buttons[i];
     }
     selectedTip.classList.add('active');
-    const per = selectedTip.value;
-    tip_amount = input_val[0].value*per/100;
+    per = selectedTip.value;
+    
     toActive();
 }
