@@ -1,7 +1,7 @@
 const reset_button = document.getElementById('reset');
 console.log("Hi");
 console.log(reset_button);
-const input_val = document.getElementsByClassName('inputs');
+const input_val = document.getElementsByClassName('input-box');
 let tipped = document.getElementById('tip-amount');
 let totalper = document.getElementById('total-amount');
 let tip_buttons = document.getElementsByClassName('tip-button');

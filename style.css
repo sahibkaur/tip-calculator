@@ -12,11 +12,14 @@ body {
   justify-content: space-evenly;
   height: 100vh;
 }
-.input-box {
+.input-wrapper {
   position: relative;
 }
+.input-box {
+  margin-bottom: 20px;
+}
 input {
-  width: 95%;
+  width: 90%;
   height: 40px;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -25,6 +28,7 @@ input {
   font-family: "Space Mono", monospace;
   color: hsl(184, 14%, 56%);
   font-size: 20px;
+  display: block;
 }
 input::placeholder {
   color: hsl(184, 14%, 56%);
@@ -80,7 +84,7 @@ label {
 }
 
 .logo {
-  margin: 20px;
+  margin: 40px;
   margin-top: 90px;
   width: 100%;
   display: flex;
@@ -131,7 +135,7 @@ label {
   font-weight: 700;
 }
 
-.tip-container {
+.right-container {
   width: 300px;
   border-radius: 20px;
   background-color: hsl(183, 100%, 15%);
@@ -160,6 +164,9 @@ label {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
+.input-label {
+  margin: 20px;
+}
 
 @media screen and (min-width: 600px) {
   .tip-container {
@@ -171,23 +178,26 @@ label {
   .bill {
     /* Apply some styles */
     border-radius: 20px;
-    width: 800px;
-    height: 400px;
+    max-width: 800px;
+    max-height: 400px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
   }
-  .tip-container {
-    height: 80%;
-    width: 45%;
+  .right-container {
+    max-height: 90%;
+    /* width: 45%; */
     justify-content: space-between;
+    margin-top: 0;
   }
   .left-container {
     width: 45%;
     display: flex;
     flex-direction: column;
-    height: 95%;
     justify-content: space-between;
+  }
+  .logo {
+    margin-top: 40px;
   }
   button {
     width: 100px;

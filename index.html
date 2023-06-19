@@ -29,15 +29,15 @@
   <div class="bill">
     <div class="left-container">
     <div class="bill-amount small-cont">
-      <p>Bill</p>
-      <div class="input-box">
-        <input type="number" class="bill-input inputs" placeholder="0" onchange="toActive()">
+      <label class="input-label">Bill</label>
+      <div class="input-wrapper">
+        <input type="number" class="bill-input input-box" placeholder="0" onchange="toActive()">
         <img src="images/icon-dollar.svg" class="icon">
       </div>
     </div>
 
     <div class="tip-amount">
-      <label>Select Tip %</label>
+      <label class="input-label">Select Tip %</label>
       <div class="tip-options">
         <button value="5" class="tip-button" onclick="changeState(this)">5%</button>
         <button value="10" class="tip-button" onclick="changeState(this)">10%</button>
@@ -49,14 +49,14 @@
     </div>
 
     <div>
-      <label>Number of People</label>
+      <label class="input-label">Number of People</label>
       <div class="input-box">
-        <input type="number" class="number inputs" placeholder="0" onchange="toActive()"></input>
+        <input type="number" class="number input-box" placeholder="0" onchange="toActive()"></input>
         <img src="images/icon-person.svg" class="icon">
       </div>
     </div>
     </div>
-  <div class="tip-container flex">
+  <div class="right-container">
     <div class="price flex">
 
       <div class="tip flex">
