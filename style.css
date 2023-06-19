@@ -187,4 +187,7 @@ label {
     button {
         width: 100px;
     }
+    .logo {
+        margin-top: 20px;
+    }
   }
