@@ -45,6 +45,7 @@ function changeState(selectedTip) {
     console.log(selectedTip);
     tip_pointer = tip_buttons[0];
     let i=0;
+    let custom_tip;
     while(tip_pointer!=null) {
         tip_pointer.classList.remove('active');
         i++;
@@ -52,6 +53,10 @@ function changeState(selectedTip) {
     }
     selectedTip.classList.add('active');
     per = selectedTip.value;
-    
+    if(per=="custom") {
+        custom_tip = prompt("Please enter the custom tip percentage");
+        per = custom_tip;
+        selectedTip.innerHTML = per + "%";
+    }     
     toActive();
 }
