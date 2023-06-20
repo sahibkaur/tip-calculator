@@ -186,7 +186,8 @@ label {
   }
   .right-container {
     max-height: 90%;
-    /* width: 45%; */
+    height: 350px;
+    width: 45%;
     justify-content: space-between;
     margin-top: 0;
   }
