@@ -95,5 +95,6 @@ function reset(btn) {
 
 function customTip(custom_input) {
     per = custom_input.value;
+    toActive();
 }
 
