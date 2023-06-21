@@ -4,6 +4,7 @@ let tipped = document.getElementById('tip-amount');
 let totalper = document.getElementById('total-amount');
 let tip_buttons = document.getElementsByClassName('tip-button');
 let not_zero_text = document.getElementsByClassName('no-zero');
+// let custom_input = document.getElementById("custom-input");
 console.log(tip_buttons);
 const bill = input_val[0].value;
 const number = input_val[1].value;
@@ -11,16 +12,10 @@ console.log(input_val);
 let tip_amount, per;
 function toActive() {
 
-    tip_pointer = tip_buttons[0];
-    let i=0;
+
     let flag = 0;
-    while(tip_pointer!=null) {
-        if(tip_pointer.classList.contains('active')) {
-            flag=1;
-            break
-        }
-        i++;
-        tip_pointer = tip_buttons[i];
+    if(per>0) {
+        flag=1
     }
     if(input_val[0].valueAsNumber>0) {
         input_val[0].style.border = "2px solid hsl(172, 67%, 45%)";
@@ -31,6 +26,7 @@ function toActive() {
     }
     
     if(input_val[2].valueAsNumber>0) {
+        input_val[2].style.border = "0";
         input_val[2].style.border = "2px solid hsl(172, 67%, 45%)";
         not_zero_text[1].classList.add('hide');
     } else {
@@ -75,11 +71,11 @@ function changeState(selectedTip) {
 
     selectedTip.classList.add('active');
     per = selectedTip.value;
-    if(per=="custom") {
-        custom_tip = prompt("Please enter the custom tip percentage");
-        per = custom_tip;
-        selectedTip.innerHTML = per + "%";
-    }     
+    // if(per=="custom") {
+    //     custom_tip = prompt("Please enter the custom tip percentage");
+    //     per = custom_tip;
+    //     selectedTip.innerHTML = per + "%";
+    // }     
     toActive();
 }
 
@@ -95,5 +91,9 @@ function reset(btn) {
     totalper.innerHTML = "$0.00";
     btn.classList.remove("active");
     btn.classList.add("inactive");
+}
+
+function customTip(custom_input) {
+    per = custom_input.value;
 }
 
