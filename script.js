@@ -4,6 +4,7 @@ let tipped = document.getElementById('tip-amount');
 let totalper = document.getElementById('total-amount');
 let tip_buttons = document.getElementsByClassName('tip-button');
 let not_zero_text = document.getElementsByClassName('no-zero');
+// let custom_input = document.getElementById("custom-input");
 console.log(tip_buttons);
 const bill = input_val[0].value;
 const number = input_val[1].value;
@@ -69,7 +70,12 @@ function changeState(selectedTip) {
     inactiveButtons();
 
     selectedTip.classList.add('active');
-    per = selectedTip.value;   
+    per = selectedTip.value;
+    // if(per=="custom") {
+    //     custom_tip = prompt("Please enter the custom tip percentage");
+    //     per = custom_tip;
+    //     selectedTip.innerHTML = per + "%";
+    // }     
     toActive();
 }
 
@@ -91,4 +97,3 @@ function customTip(custom_input) {
     per = custom_input.value;
     toActive();
 }
-
