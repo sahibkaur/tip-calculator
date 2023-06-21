@@ -3,6 +3,7 @@ const input_val = document.getElementsByClassName('inputs');
 let tipped = document.getElementById('tip-amount');
 let totalper = document.getElementById('total-amount');
 let tip_buttons = document.getElementsByClassName('tip-button');
+let not_zero_text = document.getElementsByClassName('no-zero');
 console.log(tip_buttons);
 const bill = input_val[0].value;
 const number = input_val[1].value;
@@ -21,16 +22,31 @@ function toActive() {
         i++;
         tip_pointer = tip_buttons[i];
     }
+    if(input_val[0].valueAsNumber>0) {
+        input_val[0].style.border = "2px solid hsl(172, 67%, 45%)";
+        not_zero_text[0].classList.add('hide');
+    } else {
+        input_val[0].style.border = "2px solid red";
+        not_zero_text[0].classList.remove('hide');
+    }
+    
+    if(input_val[2].valueAsNumber>0) {
+        input_val[2].style.border = "2px solid hsl(172, 67%, 45%)";
+        not_zero_text[1].classList.add('hide');
+    } else {
+        input_val[2].style.border = "2px solid red";
+        not_zero_text[1].classList.remove('hide');
+    }
 
-    if(input_val[0].valueAsNumber>0 && input_val[1].valueAsNumber>0 && flag == 1 ) {
+    if(input_val[0].valueAsNumber>0 && input_val[2].valueAsNumber>0 && flag == 1 ) {
         reset_button.classList.add("active");
         reset_button.classList.remove("inactive");
         console.log(per, input_val[0].valueAsNumber);
         tip_amount = (input_val[0].valueAsNumber)*per/100;
         console.log(tip_amount)
-        const tip_amount_per = (tip_amount)/input_val[1].valueAsNumber;
+        const tip_amount_per = (tip_amount)/input_val[2].valueAsNumber;
         console.log(input_val[0].valueAsNumber + tip_amount);
-        let total = (input_val[0].valueAsNumber + tip_amount)/input_val[1].valueAsNumber;
+        let total = (input_val[0].valueAsNumber + tip_amount)/input_val[2].valueAsNumber;
         console.log(total);
 
         //let tip = 
@@ -73,6 +89,7 @@ function reset(btn) {
     }
     input_val[0].value="";
     input_val[1].value="";
+    input_val[2].value="";
     inactiveButtons();
     tipped.innerHTML = "$0.00";
     totalper.innerHTML = "$0.00";

@@ -29,7 +29,10 @@
   <div class="bill">
     <div class="left-container">
     <div class="bill-amount small-cont">
-      <p>Bill</p>
+      <div class="label-text">
+        <label>Bill</label>
+        <span class="no-zero hide">Can't be zero</span>
+      </div>
       <div class="input">
         <input type="number" class="bill-input inputs" placeholder="0" onchange="toActive()">
         <img src="images/icon-dollar.svg" class="icon">
@@ -37,19 +40,24 @@
     </div>
 
     <div class="tip-amount">
-      <label>Select Tip %</label>
+      <div class="label-text">
+        <label>Select Tip %</label>
+      </div>
       <div class="tip-options">
         <button value="5" class="tip-button" onclick="changeState(this)">5%</button>
         <button value="10" class="tip-button" onclick="changeState(this)">10%</button>
         <button value="15" class="tip-button" onclick="changeState(this)">15%</button>
         <button value="25" class="tip-button" onclick="changeState(this)">25%</button>
         <button value="50" class="tip-button" onclick="changeState(this)">50%</button>
-        <button value="custom" class="tip-button custom" onclick="changeState(this)">Custom</button>
+        <input type="number" class="tip-button inputs custom custom-input" placeholder="Custom">
       </div>
     </div>
 
     <div>
-      <label>Number of People</label>
+      <div class="label-text">
+        <label>Number of People</label>
+        <span class="no-zero hide">Can't be zero</span>
+      </div>
       <div class="input">
         <input type="number" class="number inputs" placeholder="0" onchange="toActive()"></input>
         <img src="images/icon-person.svg" class="icon">
