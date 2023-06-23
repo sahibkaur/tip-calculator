@@ -1,4 +1,6 @@
-
+html{
+  box-sizing: border-box;
+}
 body {
     margin: 0;
     background-color: hsl(185, 41%, 84%);
@@ -20,9 +22,14 @@ input {
     margin-top: 10px;
     text-align: right;
     font-family: 'Space Mono', monospace;
-    color: hsl(184, 14%, 56%);
+    color: hsl(183, 100%, 15%);
     font-size: 20px;
+    outline: hsl(172, 67%, 45%);
 }
+/* input:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+  border:0px;
+} */
 input::placeholder {
     color: hsl(184, 14%, 56%);
 }
@@ -71,8 +78,17 @@ button {
     display: flex;
     flex-wrap: wrap;
 }
-label {
-    display: block;
+.label-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.hide {
+  display: none;
+}
+.no-zero {
+  color: #d77e64;
 }
 
 .logo {
@@ -143,7 +159,7 @@ label {
     font-size: 12px;
 }
 
-#custom {
+.custom {
     background-color: hsl(189, 41%, 97%);
     color: hsl(184, 14%, 56%);
 }
@@ -154,6 +170,14 @@ label {
 .active {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
+}
+#custom-input {
+  width: 100px;
+  display: inline-block;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  color: hsl(183, 100%, 15%);
 }
 
 @media screen and (min-width: 600px) {
@@ -167,7 +191,7 @@ label {
       /* Apply some styles */
       border-radius: 20px;
       width: 800px;
-      height: 400px;
+      height: 500px;
       display: flex;
       justify-content: space-between;
       flex-direction: row;
@@ -187,4 +211,8 @@ label {
     button {
         width: 100px;
     }
+    .logo {
+        margin-top: 20px;
+    }
   }
+
