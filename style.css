@@ -10,32 +10,6 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-.input-wrapper {
-  position: relative;
-}
-.inputs {
-  max-width: 100%;
-  /* width: 380px; */
-  height: 40px;
-  padding: 5px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  text-align: right;
-  font-family: "Space Mono", monospace;
-  color: hsl(183, 100%, 15%);
-  font-size: 20px;
-  outline: hsl(172, 67%, 45%);
-}
-
-input::placeholder {
-  color: hsl(184, 14%, 56%);
-}
-.icon {
-  position: absolute;
-  left: 20px;
-  top: 25px;
-}
 
 .bill {
   background-color: hsl(0, 0%, 100%);
@@ -56,7 +30,37 @@ input::placeholder {
   background-color: hsl(183, 100%, 15%);
   color: hsl(185, 41%, 84%);
   padding: 25px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+}
+
+.left-container > div {
+  margin-bottom: 20px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.inputs {
+  max-width: 100%;
+  height: 40px;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  color: hsl(183, 100%, 15%);
+  font-size: 20px;
+  outline: hsl(172, 67%, 45%);
+}
+
+.inputs::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+.icon {
+  position: absolute;
+  left: 20px;
+  top: 25px;
 }
 
 .bill-input,
@@ -65,11 +69,13 @@ input::placeholder {
   padding-right: 10px;
   background-color: hsl(189, 41%, 97%);
 }
+
 .tip-options {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .btn {
   background-color: hsl(183, 100%, 15%);
   color: hsl(0, 0%, 100%);
@@ -90,9 +96,11 @@ input::placeholder {
   display: flex;
   justify-content: space-between;
 }
+
 .hide {
   display: none;
 }
+
 .no-zero {
   color: #d77e64;
 }
@@ -104,6 +112,7 @@ input::placeholder {
   display: flex;
   align-items: center;
 }
+
 .logo img {
   margin: 0 auto;
 }
@@ -112,14 +121,16 @@ input::placeholder {
   padding: 10px;
   border-radius: 5px;
   border: none;
-  width: 90%;
+  width: 100%;
+  /* width: calc(100% - 10px); */
   text-transform: uppercase;
   font-family: "Space Mono", monospace;
   font-weight: bold;
   font-size: 20px;
 }
+
 .price {
-  width: 90%;
+  width: calc(100% - 20px);
 }
 
 .tip-container {
@@ -130,20 +141,22 @@ input::placeholder {
 .tip-container {
   flex-direction: column;
 }
+
 .flex {
   display: flex;
 }
+
 .tip,
 .total {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .amount {
   color: hsl(172, 67%, 45%);
   font-size: 30px;
   font-weight: 700;
 }
-
 
 .price {
   margin-bottom: 20px;
@@ -189,17 +202,18 @@ input::placeholder {
     /* Apply some styles */
     border-radius: 20px;
     max-width: 800px;
-    height: 500px;
+    max-height: 500px;
+    padding: 40px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
   }
   .left-container {
+    max-height: 100%;
     max-width: 50%;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    height: 80%;
     justify-content: space-between;
   }
   .inputs {
