@@ -28,61 +28,60 @@
   
   <div class="bill">
     <div class="left-container">
-    <div class="bill-amount small-cont">
-      <div class="label-text">
-        <label>Bill</label>
-        <span class="no-zero hide">Can't be zero</span>
+      <div class="bill-amount small-cont">
+        <div class="label-text">
+          <label>Bill</label>
+          <span class="no-zero hide">Can't be zero</span>
+        </div>
+        <div class="input-wrapper">
+          <input type="number" class="bill-input inputs" placeholder="0" onchange="toActive()" min="0">
+          <img src="images/icon-dollar.svg" class="icon">
+        </div>
       </div>
-      <div class="input-wrapper">
-        <input type="number" class="bill-input inputs" placeholder="0" onchange="toActive()" min="0">
-        <img src="images/icon-dollar.svg" class="icon">
+
+      <div class="tip-amount">
+        <div class="label-text">
+          <label>Select Tip %</label>
+        </div>
+        <div class="tip-options">
+          <button value="5" class="btn tip-button" onclick="changeState(this)">5%</button>
+          <button value="10" class="btn tip-button" onclick="changeState(this)">10%</button>
+          <button value="15" class="btn tip-button" onclick="changeState(this)">15%</button>
+          <button value="25" class="btn tip-button" onclick="changeState(this)">25%</button>
+          <button value="50" class="btn tip-button" onclick="changeState(this)">50%</button>
+          <input type="number" class="inputs custom" id="custom-input" onchange="customTip(this)" placeholder="Custom" min="0">
+        </div>
+      </div>
+
+      <div>
+        <div class="label-text">
+          <label>Number of People</label>
+          <span class="no-zero hide">Can't be zero</span>
+        </div>
+        <div class="input-wrapper">
+          <input type="number" class="number inputs" placeholder="0" onchange="toActive()" min="0"></input>
+          <img src="images/icon-person.svg" class="icon">
+        </div>
       </div>
     </div>
 
-    <div class="tip-amount">
-      <div class="label-text">
-        <label>Select Tip %</label>
-      </div>
-      <div class="tip-options">
-        <button value="5" class="btn tip-button" onclick="changeState(this)">5%</button>
-        <button value="10" class="btn tip-button" onclick="changeState(this)">10%</button>
-        <button value="15" class="btn tip-button" onclick="changeState(this)">15%</button>
-        <button value="25" class="btn tip-button" onclick="changeState(this)">25%</button>
-        <button value="50" class="btn tip-button" onclick="changeState(this)">50%</button>
-        <input type="number" class="inputs custom" id="custom-input" onchange="customTip(this)" placeholder="Custom" min="0">
-      </div>
-    </div>
-
-    <div>
-      <div class="label-text">
-        <label>Number of People</label>
-        <span class="no-zero hide">Can't be zero</span>
-      </div>
-      <div class="input-wrapper">
-        <input type="number" class="number inputs" placeholder="0" onchange="toActive()" min="0"></input>
-        <img src="images/icon-person.svg" class="icon">
-      </div>
-    </div>
-    </div>
-  <div class="tip-container flex">
-    <div class="price flex">
-      <div class="tip flex">
-        <div>
+    <div class="tip-container flex">
+      <div class="price flex">
+        <div class="tip flex">
+          <div>
             Tip Amount
             <p class="desc">/ person</p>
+          </div>
+           <div class="amount" id="tip-amount">$0.00</div>
         </div>
-        <div class="amount" id="tip-amount">$0.00</div>
-      </div>
-    
-      <div class="total flex">
-        <div>
-          Total
-          <p class="desc">/ person</p>
+        <div class="total flex">
+          <div>
+            Total
+            <p class="desc">/ person</p>
+          </div>
+          <div class="amount" id="total-amount">$0.00</div>
         </div>
-        <div class="amount" id="total-amount">$0.00</div>
       </div>
-    
-    </div>
 
     <button id="reset" class="btn inactive" onclick="reset(this)">Reset</button>
   </div>
