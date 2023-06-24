@@ -44,11 +44,11 @@
         <label>Select Tip %</label>
       </div>
       <div class="tip-options">
-        <button value="5" class="tip-button" onclick="changeState(this)">5%</button>
-        <button value="10" class="tip-button" onclick="changeState(this)">10%</button>
-        <button value="15" class="tip-button" onclick="changeState(this)">15%</button>
-        <button value="25" class="tip-button" onclick="changeState(this)">25%</button>
-        <button value="50" class="tip-button" onclick="changeState(this)">50%</button>
+        <button value="5" class="btn tip-button" onclick="changeState(this)">5%</button>
+        <button value="10" class="btn tip-button" onclick="changeState(this)">10%</button>
+        <button value="15" class="btn tip-button" onclick="changeState(this)">15%</button>
+        <button value="25" class="btn tip-button" onclick="changeState(this)">25%</button>
+        <button value="50" class="btn tip-button" onclick="changeState(this)">50%</button>
         <input type="number" class="inputs custom" id="custom-input" onchange="customTip(this)" placeholder="Custom" min="0">
       </div>
     </div>
@@ -66,7 +66,6 @@
     </div>
   <div class="tip-container flex">
     <div class="price flex">
-
       <div class="tip flex">
         <div>
             Tip Amount
@@ -85,7 +84,7 @@
     
     </div>
 
-    <button id="reset" class="inactive" onclick="reset(this)">Reset</button>
+    <button id="reset" class="btn inactive" onclick="reset(this)">Reset</button>
   </div>
 </div>
   

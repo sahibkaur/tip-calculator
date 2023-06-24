@@ -14,9 +14,11 @@ body {
 .input-wrapper {
   position: relative;
 }
-input {
-  width: 95%;
+.inputs {
+  max-width: 100%;
+  width: 380px;
   height: 40px;
+  padding: 5px;
   border-radius: 10px;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -26,10 +28,7 @@ input {
   font-size: 20px;
   outline: hsl(172, 67%, 45%);
 }
-/* input:focus {
-  outline: 2px solid hsl(172, 67%, 45%);
-  border:0px;
-} */
+
 input::placeholder {
   color: hsl(184, 14%, 56%);
 }
@@ -53,10 +52,10 @@ input::placeholder {
 .bill-input,
 .number {
   border: 0px;
-  padding: 5px;
+  padding-right: 10px;
   background-color: hsl(189, 41%, 97%);
 }
-button {
+.btn {
   background-color: hsl(183, 100%, 15%);
   color: hsl(0, 0%, 100%);
   border: 0px;
@@ -69,15 +68,10 @@ button {
   margin-bottom: 10px;
   cursor: pointer;
 }
-.tip-amount {
+.tip-options {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   justify-content: space-between;
-}
-.tip-amounts {
-  display: flex;
-  flex-wrap: wrap;
 }
 .label-text {
   margin-top: 10px;
@@ -174,9 +168,11 @@ button {
   color: hsl(183, 100%, 15%);
 }
 #custom-input {
-  width: 100px;
+  max-width: 100px;
+  max-height: 50px;
   display: inline-block;
   border: none;
+  font-size: 20px;
   padding: 10px;
   text-align: center;
   color: hsl(183, 100%, 15%);
@@ -192,26 +188,28 @@ button {
   .bill {
     /* Apply some styles */
     border-radius: 20px;
-    width: 800px;
+    max-width: 800px;
     height: 500px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
   }
-  .tip-container {
-    height: 80%;
-    width: 45%;
-    justify-content: space-between;
-  }
   .left-container {
-    width: 45%;
+    max-width: 50%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    height: 95%;
+    height: 80%;
     justify-content: space-between;
   }
-  button {
-    width: 100px;
+  .tip-container {
+    height: 80%;
+    max-width: 50%;
+    justify-content: space-between;
+  }
+
+  .btn {
+    width: 120px;
   }
   .logo {
     margin-top: 20px;
