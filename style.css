@@ -1,4 +1,4 @@
-html {
+* {
   box-sizing: border-box;
 }
 body {
@@ -25,12 +25,11 @@ body {
   align-items: center;
 }
 .tip-container {
-  width: 300px;
+  max-width: 300px;
   border-radius: 20px;
   background-color: hsl(183, 100%, 15%);
   color: hsl(185, 41%, 84%);
   padding: 25px;
-  /* margin-top: 10px; */
 }
 
 .left-container > div {
@@ -220,7 +219,7 @@ body {
     width: 380px;
   }
   .tip-container {
-    height: 80%;
+    max-height: 80%;
     max-width: 50%;
     justify-content: space-between;
   }
