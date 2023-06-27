@@ -78,11 +78,12 @@ body {
   color: hsl(0, 0%, 100%);
   border: 0px;
   font-family: "Space Mono", monospace;
-  padding: 10px 30px;
+  /* padding: 10px 30px; */
   border-radius: 5px;
   font-size: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
+  width: 30%;
   cursor: pointer;
 }
 div.tip-button {
@@ -180,7 +181,7 @@ div.tip-button {
   display: inline-block;
   border: none;
   font-size: 20px;
-  padding: 10px;
+  /* padding: 10px; */
   text-align: center;
   color: hsl(183, 100%, 15%);
 }
