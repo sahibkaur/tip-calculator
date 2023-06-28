@@ -16,8 +16,8 @@ body {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   color: hsl(186, 14%, 43%);
-  width: calc(100% - 200px);
-  max-width: 300px;
+  width: calc(100% - 50px);
+  max-width: 400px;
   font-weight: 700;
   padding: 30px;
   justify-content: space-between;
@@ -82,12 +82,12 @@ body {
   padding: 10px 40px;
   border-radius: 5px;
   font-size: 20px;
-  margin: 10px 5px;
+  margin: 10px 0px;
   cursor: pointer;
 }
 .tip-button {
-  flex-grow: 1;
-  flex-basis: 120px;
+  flex-grow: 0;
+  flex-basis: 100px;
 }
 div.tip-button {
   display: inline-block;
@@ -190,10 +190,14 @@ div.tip-button {
 }
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 400px) {
 
   .bill {
     max-width: 400px;
+  }
+  .tip-button {
+    flex-grow: 1;
+    margin: 10px 5px;
   }
 }
 
@@ -222,6 +226,7 @@ div.tip-button {
     height: 100%;
     justify-content: space-between;
   }
+
 
 
   .logo {
