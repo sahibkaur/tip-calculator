@@ -235,7 +235,6 @@ div.tip-button {
 }
 
 @media screen and (min-width: 1200px) {
-
   .tip-button {
     flex-grow: 0;
     margin: 10px 0px;
