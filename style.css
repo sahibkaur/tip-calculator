@@ -1,130 +1,248 @@
-
+* {
+  box-sizing: border-box;
+}
 body {
-    margin: 0;
-    background-color: hsl(185, 41%, 84%);
-    font-family: 'Space Mono', monospace;
-}
-
-
-.input {
-    position: relative;
-}
-input {
-    width: 95%;
-    height: 40px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    
-}
-.icon {
-    position: absolute;
-    left: 20px;
-    top: 25px;
+  margin: 0;
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .bill {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    color: hsl(186, 14%, 43%);
-    font-weight: 700;
-    padding: 20px;
+  background-color: hsl(0, 0%, 100%);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: hsl(186, 14%, 43%);
+  width: calc(100% - 50px);
+  max-width: 400px;
+  font-weight: 700;
+  padding: 30px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.bill-input, .number {
-    border: 0px;
-    padding: 5px;
-    background-color: hsl(189, 41%, 97%);
+.tip-container {
+  border-radius: 20px;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(185, 41%, 84%);
+  padding: 25px;
 }
-button {
-    background-color: hsl(183, 100%, 15%);
-    color: hsl(0, 0%, 100%);
-    border: 0px;
-    font-family: 'Space Mono', monospace;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 20px;
-    width: 170px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+.left-container > div {
+  margin-bottom: 20px;
 }
-.tip-amount {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
+
+.input-wrapper {
+  position: relative;
 }
-.tip-amounts {
-    display: flex;
-    flex-wrap: wrap;
+
+.inputs {
+  width:100%;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  color: hsl(183, 100%, 15%);
+  font-size: 20px;
+  outline: hsl(172, 67%, 45%);
 }
-label {
-    display: block;
+
+.inputs::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+.icon {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+
+.bill-input,
+.number {
+  border: 0px;
+  padding-right: 10px;
+  background-color: hsl(189, 41%, 97%);
+}
+
+.tip-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  border: 0px;
+  font-family: "Space Mono", monospace;
+  padding: 10px 40px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+.tip-button {
+  flex-grow: 0;
+  flex-basis: 100px;
+}
+div.tip-button {
+  display: inline-block;
+}
+
+.label-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none;
+}
+
+.no-zero {
+  color: #d77e64;
 }
 
 .logo {
-    margin: 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
+  margin: 20px;
+  margin-top: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
+
 .logo img {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
-.bill {
-    background-color: hsl(0, 0%, 100%);
-    height: 900px;
+#reset {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.reset-btn{
-    background-color: hsl(172, 67%, 45%);
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    width: 90%;
-    color: hsl(183, 100%, 15%);
-    text-transform: uppercase;
-    font-family: 'Space Mono', monospace;
-    font-weight: bold;
-    font-size: 20px;
-}
 .price {
-    width: 90%;
+  width: calc(100% - 20px);
 }
 
 .tip-container {
-    align-items: center;
+  align-items: center;
 }
 
-.price, .tip-container {
-    flex-direction: column;
+.price,
+.tip-container {
+  flex-direction: column;
 }
+
 .flex {
-    display: flex;
-}
-.tip, .total {
-    flex-direction: row;
-    justify-content: space-between;
-}
-.amount {
-    color: hsl(172, 67%, 45%);
-    font-size: 30px;
-    font-weight: 700;
+  display: flex;
 }
 
-.tip-container {
-    width: 300px;
-    border-radius: 20px;
-    background-color: hsl(183, 100%, 15%);
-    color: hsl(185, 41%, 84%);
-    padding: 25px;
-    margin-top: 10px;
+.tip,
+.total {
+  flex-direction: row;
+  justify-content: space-between;
 }
+
+.amount {
+  color: hsl(172, 67%, 45%);
+  font-size: 30px;
+  font-weight: 700;
+}
+
 .price {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .desc {
-    color: hsl(184, 14%, 56%);
-    font-size: 12px;
+  color: hsl(184, 14%, 56%);
+  font-size: 12px;
+}
+
+.inactive {
+  background-color: #0b676d;
+  color: #065f63;
+}
+.active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+#custom-input {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(184, 14%, 56%);
+  display: inline-block;
+  border: none;
+  font-size: 20px;
+
+  padding: 10px 0;
+  text-align: center;
+  color: hsl(183, 100%, 15%);
+}
+
+
+@media screen and (min-width: 400px) {
+
+  .bill {
+    max-width: 400px;
+  }
+  .tip-button {
+    flex-grow: 1;
+    margin: 10px 5px;
+  }
+}
+
+
+@media screen and (min-width: 800px) {
+  body {
+    height: 100vh;
+  }
+  .bill {
+    border-radius: 20px;
+    max-width: 900px;  
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .left-container {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .tip-container {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+  }
+.tip-button {
+  flex-basis: 120px;
+}
+
+  .logo {
+    margin-top: 20px;
+  }
+  .custom-input {
+    min-width: 100%;
+    width: 1px;
+    font-size: 15px;
+  } 
+}
+
+@media screen and (min-width: 1200px) {
+  .tip-button {
+    flex-grow: 0;
+    margin: 10px 0px;
+  }
 }
